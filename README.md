@@ -21,3 +21,12 @@ A new fast and lightweight language based on a transpiler instead of a compiler
 3. run cd Ccode/
 4. run ./bootstrap
 5. You now need to follow the instructions from the last step to run the language
+
+
+## Included commands
+1. print (syntax: print 'hi')
+2. variables (syntax1: h = 5 syntax2: h = "hi")
+3. If statements syntax: 
+if h = 5 {
+print 'hi'
+}
