@@ -1,2 +1,3 @@
 npm install prompt-sync
+chmod +x run
 echo run python3 Ccode.py to run
