@@ -27,6 +27,6 @@ A new fast and lightweight language based on a transpiler instead of a compiler
 ### print (syntax: print 'hi')
 ### variables (syntax1: h = 5 syntax2: h = "hi")
 ### If statements syntax: 
-if h = 5 {
-print 'hi'
+if h = 5 {  
+print 'hi'  
 }
