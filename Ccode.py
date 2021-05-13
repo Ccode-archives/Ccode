@@ -1,7 +1,6 @@
 #imports and settings
 import os
 running = True
-os.system("pwd")
 os.system("cp ~/Ccode/scripts/main.js ~/Ccode/")
 
 #js writing command
