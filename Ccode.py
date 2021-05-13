@@ -2,7 +2,7 @@
 import os
 running = True
 os.system("pwd")
-os.system("cp ~/lang/scripts/main.js ~/lang/")
+os.system("cp ~/Ccode/scripts/main.js ~/lang/")
 
 #js writing command
 def js(out):
