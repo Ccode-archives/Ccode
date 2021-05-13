@@ -1,0 +1,2 @@
+npm install prompt-sync
+echo run python3 Ccode.py to run
