@@ -19,7 +19,7 @@ A new fast and lightweight language based on a transpiler instead of a compiler
 1. run command cd ~/
 2. run git clone https://github.com/Ccode-lang/Ccode.git
 3. run cd Ccode/
-4. run ./bootstrap
+4. run ./bootstrap (if this does not work run (chmod +x bootstrap) then try again)
 5. You now need to follow the instructions from the last step to run the language
 
 
