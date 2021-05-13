@@ -24,9 +24,11 @@ A new fast and lightweight language based on a transpiler instead of a compiler
 
 
 ## Included commands
-### print (syntax: print 'hi')
-### variables (syntax1: h = 5 syntax2: h = "hi")
+### Print (syntax: print 'hi')
+### Variables (syntax1: h = 5 syntax2: h = "hi")
 ### If statements syntax: 
 if h = 5 {  
 print 'hi'  
 }
+### Input variable (syntax: h = input)
+This gets user input and stores it in the given variable.
