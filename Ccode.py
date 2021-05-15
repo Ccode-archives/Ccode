@@ -29,7 +29,7 @@ while running:
     #while
     elif inp.startswith("while ") and inp.endswith(" {"):
         out = inp.replace("while ", "")
-        out = inp.replace(" {", "")
+        out = out.replace(" {", "")
         js("while (" + out + ") {")
     #if statements
     elif inp.startswith("if ") and inp.endswith(" {"):
