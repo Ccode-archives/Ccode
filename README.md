@@ -26,7 +26,7 @@ A new fast and lightweight language based on a transpiler instead of a compiler
 
 ## Included commands
 ### Print (syntax: print 'hi')
-### Variables (syntax1: h = 5 syntax2: h = "hi")
+### Variables (syntax1: var h = 5 syntax2: var h = "hi")
 ### If statements syntax: 
 if h == 5 {  
 print 'hi'  
