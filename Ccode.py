@@ -48,7 +48,7 @@ while running:
     elif inp == "}":
         js(inp)
     #variables
-    elif inp.find("=") > -1 or inp.find(" = ") > -1:
+    elif inp.find("=") > -1 or inp.find(" = ") > -1 or inp.startswith("var "):
         out = inp
         if inp.find("input") > -1:
             out = inp.replace("input", "prompt('>>')")
