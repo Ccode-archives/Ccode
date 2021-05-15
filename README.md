@@ -37,7 +37,7 @@ print 'bye'
 else {  
 print 'hello'  
 }  
-### Input variable (syntax: h = input)
+### Input variable (syntax: var h = input)
 This gets user input and stores it in the given variable.
 ### While
 while h == 1 {  
