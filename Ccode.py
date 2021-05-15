@@ -1,7 +1,12 @@
 #imports and settings
 import os
-running = True
 os.system("cp ~/Ccode/scripts/main.js ~/Ccode/")
+
+try:
+    file = open('main.cc', 'r')
+    text = file.readlines()
+except FileNotFoundError:
+    print("main.cc missing, aborting")
 
 #js writing command
 def js(out):
@@ -15,17 +20,16 @@ def NU():
     print("unknown command")
 
 #loop start
-while running:
+for line in text:
     #input
-    inp = input("Ccode language >> ")
+    inp = line.strip()
     #print
     if inp.startswith("print "):
         println = inp.replace("print ", "")
         out = "console.log(" + println + ");"
         js(out)
-    #run
-    elif inp == "run":
-        running = False
+    elif inp == "":
+        out = "null"
     #while
     elif inp.startswith("while ") and inp.endswith(" {"):
         out = inp.replace("while ", "")
