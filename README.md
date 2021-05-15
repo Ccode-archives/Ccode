@@ -30,6 +30,16 @@ A new fast and lightweight language based on a transpiler instead of a compiler
 ### If statements syntax: 
 if h == 5 {  
 print 'hi'  
-}
+}  
+elif h == 4 {
+print 'bye'  
+}  
+else {  
+print 'hello'  
+}  
 ### Input variable (syntax: h = input)
 This gets user input and stores it in the given variable.
+### While
+while h == 1 {
+print 'hi'
+}
