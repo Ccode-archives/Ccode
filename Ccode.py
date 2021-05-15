@@ -26,11 +26,24 @@ while running:
     #run
     elif inp == "run":
         running = False
+    #while
+    elif inp.startswith("while ") and inp.endswith(" {"):
+        out = inp.replace("while", "")
+        out = inp.replace(" {", "")
+        js("while (" + out + ") {")
     #if statements
     elif inp.startswith("if ") and inp.endswith(" {"):
         out = inp.replace("if ", "")
         out = out.replace(" {", "")
         js("if (" + out + ") {")
+    #else
+    elif inp == "else {":
+        js(inp)
+    #elif
+    elif inp.startswith("elif ") and inp.endswith(" {"):
+        out = inp.replace("elif ", "")
+        out = out.replace(" {", "")
+        js("else if (" + out + ") {")
     #end brackets
     elif inp == "}":
         js(inp)
