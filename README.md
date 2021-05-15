@@ -3,7 +3,7 @@ A new fast and lightweight language based on a transpiler instead of a compiler
 
 ## How it works
 1. It first copys main.js from scripts to the main dir.
-2. it reads a file called main.cc.
+2. it reads a file called main.cc. (Create this file before running or you will get an error)
 3. Once it reads all the lines it runs the Javascript it created.
 4. It deletes the Javascript. (Comment the last line to turn this off)
 
