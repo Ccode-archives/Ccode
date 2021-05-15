@@ -42,3 +42,6 @@ This gets user input and stores it in the given variable.
 while h == 1 {  
 print 'hi'  
 }  
+
+
+### Please record issues to get them fixed or go to disscutions if you get an error message!
