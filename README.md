@@ -40,6 +40,6 @@ print 'hello'
 ### Input variable (syntax: h = input)
 This gets user input and stores it in the given variable.
 ### While
-while h == 1 {
-print 'hi'
-}
+while h == 1 {  
+print 'hi'  
+}  
