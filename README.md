@@ -25,7 +25,7 @@ A new fast and lightweight language based on a transpiler instead of a compiler
 
 ## Included commands
 ### Print (syntax: print 'hi')
-### Variables (syntax1: var h = 5 syntax2: var h = "hi")
+### Variables (syntax1: h = 5 syntax2: h = "hi")
 ### If statements syntax: 
 if h == 5 {  
 print 'hi'  
@@ -36,7 +36,7 @@ print 'bye'
 else {  
 print 'hello'  
 }  
-### Input variable (syntax: var h = input)
+### Input variable (syntax: h = input)
 This gets user input and stores it in the given variable.
 ### While
 while h == 1 {  
