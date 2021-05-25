@@ -1,5 +1,6 @@
 ## Ccode
-A new fast and lightweight language based on a transpiler instead of a compiler
+A new fast and lightweight language based on a transpiler instead of a compiler.  
+Ccode has nothing to do with any other version of C, it is a separate project.
 
 ## How it works
 1. It first copys main.js from scripts to the main dir.
