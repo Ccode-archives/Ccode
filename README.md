@@ -45,3 +45,7 @@ print 'hi'
 
 
 ### Please record issues to get them fixed or go to disscutions if you get an error message!
+This language is in the early stages of development.  
+If you get a node.js error message it means you either forgot A end bracket or there is an error in the main Ccode.py file.  
+If you get errors like these report them as soon as possible.  
+
