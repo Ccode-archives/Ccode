@@ -52,8 +52,8 @@ for line in text:
     elif inp == "}":
         js(inp)
     #variables
-    elif inp.find("=") > -1 or inp.find(" = ") > -1 or inp.startswith("var "):
-        out = inp
+    elif inp.find("=") > -1 or inp.find(" = ") > -1:
+        out = "var " + inp
         if inp.find("input") > -1:
             out = inp.replace("input", "prompt('>>')")
         js(out + ";")
