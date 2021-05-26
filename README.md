@@ -70,7 +70,7 @@ If you get errors like these report them as soon as possible.
 
 ## terminal output
 The language gets user input through the node packages downloaded by the bootstrap script.   
-This is th command used.
+This is the command used.
 ```javascript
 const prompt = require('prompt-sync')();
 ```
