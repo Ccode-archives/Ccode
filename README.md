@@ -4,7 +4,7 @@ Ccode has nothing to do with any other version of C, it is a separate project.
 
 ## How it works
 1. It first copys main.js from scripts to the main dir.
-2. It reads a file called main.cc and gets rid of whitespace such as tabs or spaces at the start or beginning of a command. (Create this file before running or you will get an error)
+2. It reads a file called main.cc and gets rid of whitespace such as tabs or spaces at the start or beginning of a command.
 3. Once it reads all the lines it runs the Javascript it created.
 4. It deletes the Javascript. (Comment the last line to turn this off)
 
@@ -21,7 +21,6 @@ Ccode has nothing to do with any other version of C, it is a separate project.
 3. run cd Ccode/
 4. run chmod +x bootstrap
 5. run ./bootstrap
-6. make main.cc file in Ccode folder
 7. You now need to follow the instructions from the last step to run the language
 
 
