@@ -24,4 +24,9 @@ jobs:
           node-version: 14
           
       - name: execute py script
-        run: python Ccode.py
+        run: |
+          npm install prompt-sync
+          chmod +x run
+          echo run python3 Ccode.py to run
+          python Ccode.py
+          
