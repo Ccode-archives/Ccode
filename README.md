@@ -50,3 +50,23 @@ This language is in the early stages of development.
 If you get a node.js error message it means you either forgot A end bracket or there is an error in the main Ccode.py file.  
 If you get errors like these report them as soon as possible.  
 
+## terminal output
+after execution the terminal should say something like. 
+
+```
+~ % cd Ccode
+Ccode % chmod +x bootstrap
+Ccode % ./bootstrap
+
++ prompt-sync@4.2.0
+added 3 packages from 3 contributors and audited 3 packages in 2.288s
+found 0 vulnerabilities
+
+run python3 Ccode.py to run
+
+```
+
+## main script file
+```python
+
+```
