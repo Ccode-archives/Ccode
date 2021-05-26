@@ -16,33 +16,51 @@ Ccode has nothing to do with any other version of C, it is a separate project.
 
 
 ## Installation
-1. run command cd ~/
-2. run git clone https://github.com/Ccode-lang/Ccode.git
-3. run cd Ccode/
-4. run chmod +x bootstrap
-5. run ./bootstrap
-7. You now need to follow the instructions from the last step to run the language
-
+```bash
+command cd ~/
+git clone https://github.com/Ccode-lang/Ccode.git
+cd Ccode/
+chmod +x bootstrap
+./bootstrap
+#You now need to follow the instructions from the last step to run the language
+```
 
 ## Included commands
-### Print (syntax: print 'hi')
-### Variables (syntax1: h = 5 syntax2: h = "hi")
+### Print syntax: 
+```
+print 'hi'
+```
+### Variables syntax1: 
+```
+h = 5
+```
+# syntax2:
+```
+h = "hi"
+```
 ### If statements syntax: 
+```
 if h == 5 {  
 print 'hi'  
 }  
-elif h == 4 {
+elif h == 4 {   
 print 'bye'  
 }  
 else {  
 print 'hello'  
 }  
-### Input variable (syntax: h = input)
+```
+### Input variable syntax: 
+```
+h = input
+```
 This gets user input and stores it in the given variable.
 ### While
+```
 while h == 1 {  
 print 'hi'  
 }  
+```
 
 
 ### Please record issues to get them fixed or go to disscutions if you get an error message!
@@ -51,19 +69,10 @@ If you get a node.js error message it means you either forgot A end bracket or t
 If you get errors like these report them as soon as possible.  
 
 ## terminal output
-after execution the terminal should say something like. 
-
-```
-~ % cd Ccode
-Ccode % chmod +x bootstrap
-Ccode % ./bootstrap
-
-+ prompt-sync@4.2.0
-added 3 packages from 3 contributors and audited 3 packages in 2.288s
-found 0 vulnerabilities
-
-run python3 Ccode.py to run
-
+The language gets user input through the node packages downloaded by the bootstrap script.   
+This is th command used.
+```javascript
+const prompt = require('prompt-sync')();
 ```
 
 ## main script file
