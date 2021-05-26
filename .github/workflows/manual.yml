@@ -24,4 +24,4 @@ jobs:
           node-version: 14
           
       - name: execute py script
-        run: python main.py
+        run: python Ccode.py
