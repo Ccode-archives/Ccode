@@ -54,7 +54,8 @@ for line in text:
     #variables
     elif inp.find("=") > -1 or inp.find(" = ") > -1:
         if inp.startswith("set "):
-            out = "var " + inp
+            change = inp.replace("set ", "")
+            out = "var " + change
         else:
             out = inp
         if inp.find("input") > -1:
