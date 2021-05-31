@@ -53,7 +53,10 @@ for line in text:
         js(inp)
     #variables
     elif inp.find("=") > -1 or inp.find(" = ") > -1:
-        out = "var " + inp
+        if inp.startswith("set "):
+            out = "var " + inp
+        else:
+            out = inp
         if inp.find("input") > -1:
             out = inp.replace("input", "prompt('>>')")
         js(out + ";")
