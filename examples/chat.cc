@@ -1,7 +1,7 @@
-run = 1
+set run = 1
 
 while run == 1 {
-	inp = input
+	set inp = input
 	if inp == "hello" {
 		print "hi"
 	}
