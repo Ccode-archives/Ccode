@@ -32,11 +32,11 @@ print 'hi'
 ```
 ### Variables syntax1: 
 ```
-h = 5
+set h = 5
 ```
 # syntax2:
 ```
-h = "hi"
+h = 5
 ```
 ### If statements syntax: 
 ```
