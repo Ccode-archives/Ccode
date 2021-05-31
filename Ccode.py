@@ -58,8 +58,10 @@ for line in text:
             out = "var " + change
         else:
             out = inp
-        if inp.find("input") > -1:
+        try:
             out = inp.replace("input", "prompt('>>')")
+        except:
+            out = out
         js(out + ";")
     else:
         NU()
