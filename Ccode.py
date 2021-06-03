@@ -59,7 +59,7 @@ for line in text:
         else:
             out = inp
         try:
-            out = inp.replace("input", "prompt('>>')")
+            out = out.replace("input", "prompt('>>')")
         except:
             out = out
         js(out + ";")
