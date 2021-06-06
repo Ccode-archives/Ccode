@@ -61,14 +61,24 @@ while h == 1 {
 print 'hi'  
 }  
 ```
-
+### functions
+declaration
+```
+func test(num1, num2) {
+  print num1 + num2
+}
+```
+using function
+```
+test(1, 2)
+```
 
 ### Please record issues to get them fixed or go to disscutions if you get an error message!
 This language is in the early stages of development.  
-If you get a node.js error message it means you either forgot A end bracket or there is an error in the main Ccode.py file.  
+If you get a node.js error message it means you either forgoten a end bracket or there is an error in the main Ccode.py file.  
 If you get errors like these report them as soon as possible.  
 
-## terminal output
+## terminal input
 The language gets user input through the node packages downloaded by the bootstrap script.   
 This is the command used.
 ```javascript
