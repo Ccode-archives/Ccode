@@ -21,7 +21,7 @@ def NU(inp):
 line_num = 0
 #loop start
 for line in text:
-    line_mun += 1
+    line_num += 1
     #input
     inp = line.strip()
     #print
