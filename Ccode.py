@@ -30,6 +30,11 @@ for line in text:
         js(out)
     elif inp == "":
         out = "null"
+    #functions
+    elif inp.startswith("func ") and inp.endswith(" {"):
+        out = inp.replace("func ", "function ")
+        out = out.replace("{", "")
+        js(out + "{")
     #while
     elif inp.startswith("while ") and inp.endswith(" {"):
         out = inp.replace("while ", "")
@@ -50,6 +55,9 @@ for line in text:
         js("else if (" + out + ") {")
     #end brackets
     elif inp == "}":
+        js(inp)
+    #exe functions
+    elif inp.endswith(")"):
         js(inp)
     #variables
     elif inp.find("=") > -1 or inp.find(" = ") > -1:
