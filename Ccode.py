@@ -5,6 +5,7 @@ os.system("cp ~/Ccode/scripts/main.js ~/Ccode/")
 try:
     file = open('main.cc', 'r')
     text = file.readlines()
+    file.close()
 except FileNotFoundError:
     print("main.cc missing, aborting")
 
