@@ -16,11 +16,12 @@ def js(out):
     f.close()
 
 #unknown command message
-def NU():
-    print("unknown command")
-
+def NU(inp):
+    print("unknown commandat line " + "inp")
+line_num = 0
 #loop start
 for line in text:
+    line_mun += 1
     #input
     inp = line.strip()
     #print
@@ -28,7 +29,7 @@ for line in text:
         println = inp.replace("print ", "")
         out = "console.log(" + println + ");"
         js(out)
-    elif inp == "":
+    elif inp == "" or inp.startswith("//"):
         out = "null"
     #functions
     elif inp.startswith("func ") and inp.endswith(" {"):
