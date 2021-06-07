@@ -18,7 +18,8 @@ def js(out):
 
 #unknown command message
 def NU(inp):
-    print("unknown commandat line " + "inp")
+    print("unknown command at line " + "inp")
+    print("skipping line")
 line_num = 0
 #loop start
 for line in text:
@@ -30,6 +31,9 @@ for line in text:
         println = inp.replace("print ", "")
         out = "console.log(" + println + ");"
         js(out)
+    if inp.startswith("return "):
+        out = inp + ";"
+    #comments
     elif inp == "" or inp.startswith("//"):
         out = "null"
     #functions
