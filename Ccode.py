@@ -62,9 +62,6 @@ for line in text:
     #end brackets
     elif inp == "}":
         js(inp)
-    #exe functions
-    elif inp.endswith(")"):
-        js(inp)
     #variables
     elif inp.find("=") > -1 or inp.find(" = ") > -1:
         if inp.startswith("set "):
@@ -77,6 +74,8 @@ for line in text:
         except:
             out = out
         js(out + ";")
+    elif inp.endswith(")"):
+        js(inp)
     else:
         NU(line_num)
 #end of loop
