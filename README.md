@@ -52,6 +52,7 @@ print 'hello'
 ```
 ### Input variable syntax: 
 ```
+// TODO: this code dose not work
 h = input
 ```
 This gets user input and stores it in the given variable.
