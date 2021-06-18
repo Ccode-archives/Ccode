@@ -7,13 +7,21 @@ Please send in pull requests to get your features here.
 
 ## How it works
 1. It first copys main.js from scripts to the main dir.
-2. It reads a file called main.cc and gets rid of whitespace such as tabs or spaces at the start or beginning of a command.
+2. It reads a file given to it and gets rid of whitespace such as tabs or spaces at the start or beginning of a command.
 3. Once it reads all the lines it runs the Javascript it created.
 4. It deletes the Javascript. (Comment the last line to turn this off, if turned off it may cause errors)
 
+## Running
+```bash
+# python3
+python3 Ccode.py <path to Ccode file>
+
+# python2
+python Ccode.py <path to Ccode file>
+```
 
 ## Requirments
-1. Python3 (To run the compiler)
+1. Python3 or 2 (To run the compiler)
 2. Bash (You need to be on linux for it to work so this is installed)
 3. Node.js (To run the Javascript files that are generated)
 
