@@ -1,5 +1,6 @@
-cwd = $(pwd)
-    if [ $cwd == $HOME ]; then
+set cwd = $(pwd)
+set home = $HOME + "/Ccode "
+if [[ $cwd == $home ]]; then
     npm install prompt-sync
     chmod +x run
     echo Run python3 Ccode.py to run
