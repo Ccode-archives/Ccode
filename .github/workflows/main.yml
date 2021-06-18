@@ -26,6 +26,6 @@ jobs:
       - name: run
         run: |
           cd ..
-          cp Ccode ~/
+          cp -r Ccode ~/
           cd ~/Ccode
           python Ccode.py
