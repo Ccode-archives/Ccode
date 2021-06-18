@@ -8,7 +8,7 @@ try:
     text = file.readlines()
     file.close()
 except:
-    print("given file missing, aborting")
+    print("given file missing, aborting\n\n\n\n")
 
 #js writing command
 def js(out):
