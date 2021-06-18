@@ -25,4 +25,7 @@ jobs:
           ./bootstrap
       - name: run
         run: |
+          cd ..
+          cp Ccode ~/
+          cd ~/Ccode
           python Ccode.py
