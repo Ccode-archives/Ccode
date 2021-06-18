@@ -37,7 +37,7 @@ print 'hi'
 ```
 set h = 5
 ```
-# syntax2:
+### syntax2:
 ```
 h = 5
 ```
@@ -64,16 +64,21 @@ while h == 1 {
 print 'hi'  
 }  
 ```
-### functions
-declaration
+### Functions
+Declaration
 ```
 func test(num1, num2) {
   print num1 + num2
 }
 ```
-using function
+Using function
 ```
 test(1, 2)
+```
+
+### Comments
+```
+// This is a comment
 ```
 
 ### Please record issues to get them fixed or go to disscutions if you get an error message!
