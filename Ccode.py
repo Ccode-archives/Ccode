@@ -17,9 +17,9 @@ def js(out):
     f.close()
 
 #unknown command message
-def NU():
+def NU(line):
     print("unknown command")
-    print("skipping line")
+    print("skipping line " + str(line))
 line_num = 0
 #loop start
 for line in text:
@@ -75,7 +75,7 @@ for line in text:
     elif inp.endswith(")"):
         js(inp)
     else:
-        NU()
+        NU(line_num)
 #end of loop
 
 #run commands
