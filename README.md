@@ -9,7 +9,7 @@ Please send in pull requests to get your code on here.
 1. It first copys main.js from scripts to the main dir.
 2. It reads a file called main.cc and gets rid of whitespace such as tabs or spaces at the start or beginning of a command.
 3. Once it reads all the lines it runs the Javascript it created.
-4. It deletes the Javascript. (Comment the last line to turn this off)
+4. It deletes the Javascript. (Comment the last line to turn this off, if turned off it may cause errors)
 
 
 ## Requirments
@@ -55,7 +55,6 @@ print 'hello'
 ```
 ### Input variable syntax: 
 ```
-// TODO: this code dose not work
 h = input
 ```
 This gets user input and stores it in the given variable.
