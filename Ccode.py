@@ -1,13 +1,14 @@
 #imports and settings
 import os
+import sys
 os.system("cp ~/Ccode/scripts/main.js ~/Ccode/")
-
+args = sys.argv
 try:
-    file = open('main.cc', 'r')
+    file = open(args[1], 'r')
     text = file.readlines()
     file.close()
 except FileNotFoundError:
-    print("main.cc missing, aborting")
+    print(args[1] + " missing, aborting")
 
 #js writing command
 def js(out):
