@@ -4,12 +4,7 @@ import sys
 os.system("cp ~/Ccode/scripts/main.js ~/Ccode/")
 args = sys.argv
 try:
-    readfile = args[1]
-    if readfile == "":
-        file = open('main.cc', 'r')
-        readfile = "main.cc"
-    else:
-        file = open(readfile, 'r')
+    file = open(args[1], 'r')
     text = file.readlines()
     file.close()
 except:
