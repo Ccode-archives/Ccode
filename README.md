@@ -1,5 +1,5 @@
 ## Ccode
-A new fast and lightweight language based on a transpiler instead of a compiler.  
+A new fast and lightweight language that compiles to javascript.  
 Ccode has nothing to do with any other version of C, it is a separate project.
 
 ## Contributing
@@ -13,7 +13,7 @@ Please send in pull requests to get your code on here.
 
 
 ## Requirments
-1. Python3 (To run the transpiler)
+1. Python3 (To run the compiler)
 2. Bash (You need to be on linux for it to work so this is installed)
 3. Node.js (To run the Javascript files that are generated)
 
