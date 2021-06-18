@@ -33,7 +33,6 @@ git clone https://github.com/Ccode-lang/Ccode.git
 cd Ccode/
 chmod +x bootstrap
 ./bootstrap
-# You now need to follow the instructions from the last step to run the language
 ```
 
 ## Included commands
