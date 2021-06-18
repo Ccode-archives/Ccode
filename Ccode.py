@@ -18,8 +18,7 @@ def js(out):
 
 #unknown command message
 def NU(line):
-    print("unknown command")
-    print("skipping line " + str(line))
+    print("error on line: " + str(line))
 line_num = 0
 #loop start
 for line in text:
