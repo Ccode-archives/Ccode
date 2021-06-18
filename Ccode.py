@@ -4,11 +4,16 @@ import sys
 os.system("cp ~/Ccode/scripts/main.js ~/Ccode/")
 args = sys.argv
 try:
-    file = open(args[1], 'r')
+    readfile = args[1]
+    if readfile == "":
+        file = open('main.cc', 'r')
+        readfile = "main.cc"
+    else:
+        file = open(readfile, 'r')
     text = file.readlines()
     file.close()
-except FileNotFoundError:
-    print(args[1] + " missing, aborting")
+except:
+    print(readfile + "missing, aborting")
 
 #js writing command
 def js(out):
