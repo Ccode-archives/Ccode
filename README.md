@@ -1,9 +1,9 @@
 ## Ccode
-A new fast and lightweight language that compiles to javascript.  
+A new, fast, and lightweight language that compiles to javascript.  
 Ccode has nothing to do with any other version of C, it is a separate project.
 
 ## Contributing
-Please send in pull requests to get your code on here.  
+Please send in pull requests to get your features here.
 
 ## How it works
 1. It first copys main.js from scripts to the main dir.
