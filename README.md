@@ -2,6 +2,9 @@
 A new fast and lightweight language based on a transpiler instead of a compiler.  
 Ccode has nothing to do with any other version of C, it is a separate project.
 
+## Contributing
+Please send in pull requests to get your code on here.  
+
 ## How it works
 1. It first copys main.js from scripts to the main dir.
 2. It reads a file called main.cc and gets rid of whitespace such as tabs or spaces at the start or beginning of a command.
