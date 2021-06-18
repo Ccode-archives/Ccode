@@ -1,3 +1,9 @@
-npm install prompt-sync
-chmod +x run
-echo run python3 Ccode.py to run
+cwd = $(pwd)
+    if [ $cwd == $HOME ]; then
+    npm install prompt-sync
+    chmod +x run
+    echo Run python3 Ccode.py to run
+else
+    echo "Directory not valid. Try runnin at ~"
+    echo "To do that run: cd ~/"
+fi
