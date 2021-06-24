@@ -87,7 +87,7 @@ test(1, 2)
 // This is a comment
 ```
 
-### Please record issues to get them fixed or go to discussion if you get an error message!
+## Please record issues to get them fixed or go to discussion if you get an error message!
 This language is in early stages of development.  
 If you get a node.js error message it means you either forgoten a end bracket, parenthesis, forgot to execute a command, didn't execute a command right, or there is an error in the main Ccode.py file.  
 If you get errors like these report them as soon as possible.  
