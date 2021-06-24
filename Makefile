@@ -5,14 +5,9 @@ main:
 all: install_npm_deps test
 
 
-install_npm_deps: get_ready
+install_npm_deps:
 	@echo "Installing npm deps..."
 	@npm install prompt-sync
-	@echo "Done\n"
-
-get_ready:
-	@echo "Getting ready..."
-	@chmod +x bootstrap
 	@echo "Done\n"
 
 
