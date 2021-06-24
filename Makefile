@@ -7,7 +7,7 @@ all: install_npm_deps test
 
 install_npm_deps:
 	@echo "Installing npm deps..."
-	@npm install prompt-sync
+	@npm install prompt-sync@4.2.0
 	@echo "Done\n"
 
 
