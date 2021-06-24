@@ -16,8 +16,7 @@ get_ready:
 
 test:
 	@echo "Testing..."
-	@echo "\n\n"
 	@echo "running hello world..."
-	@echo "\n\n\n\n"
+	@echo "\n"
 	@python3 Ccode.py examples/hello_world.cc || python Ccode.py examples/hello_world.cc || echo "Error: no python interpreter found!"
 	
