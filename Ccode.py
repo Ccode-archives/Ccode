@@ -80,5 +80,5 @@ for line in text:
 #end of loop
 
 #run commands
-os.system("./run")
+os.system("node main.js")
 os.system("rm main.js")

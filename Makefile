@@ -7,7 +7,7 @@ all: install_npm_deps test
 
 install_npm_deps: get_ready
 	@echo "Installing npm deps..."
-	@./bootstrap
+	@npm install prompt-sync
 	@echo "Done\n"
 
 get_ready:
