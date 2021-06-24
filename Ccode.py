@@ -2,7 +2,7 @@
 import os
 import sys
 os.system("touch main.js")
-os.system("echo 'const prompt = require('prompt-sync')();' >> main.js")
+os.system("echo 'const input = require('prompt-sync')();' >> main.js")
 args = sys.argv
 try:
     file = open(args[1], 'r')
@@ -70,7 +70,7 @@ for line in text:
         else:
             out = inp
         try:
-            out = out.replace("input", "prompt('>>')")
+            out = out.replace("input", "input('>>')")
         except:
             out = out
         js(out + ";")
