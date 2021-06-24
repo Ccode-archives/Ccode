@@ -2,7 +2,6 @@
 import os
 import sys
 os.system("touch main.js")
-os.system("echo 'const input = require('prompt-sync')();' >> main.js")
 args = sys.argv
 try:
     file = open(args[1], 'r')
@@ -18,7 +17,7 @@ def js(out):
     f.write("\n")
     f.write(out)
     f.close()
-
+js("const input = require('prompt-sync')();")
 #unknown command message
 def NU(line):
     print("error on line: " + str(line))
