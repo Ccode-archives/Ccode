@@ -31,8 +31,7 @@ python Ccode.py <path to Ccode file>
 command cd ~/
 git clone https://github.com/Ccode-lang/Ccode.git
 cd Ccode/
-chmod +x bootstrap
-./bootstrap
+make all
 ```
 
 ## Included commands
