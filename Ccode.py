@@ -1,7 +1,8 @@
 #imports and settings
 import os
 import sys
-os.system("cp ~/Ccode/scripts/main.js ~/Ccode/")
+os.system("touch main.js")
+os.system("echo 'const prompt = require('prompt-sync')();' >> main.js")
 args = sys.argv
 try:
     file = open(args[1], 'r')
