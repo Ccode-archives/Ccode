@@ -7,11 +7,13 @@ all: install_npm_deps test
 
 install_npm_deps: get_ready
 	@echo "Installing npm deps..."
-	./bootstrap
+	@./bootstrap
+	@echo "Done\n"
 
 get_ready:
 	@echo "Getting ready..."
-	chmod +x bootstrap
+	@chmod +x bootstrap
+	@echo "Done\n"
 
 
 test:
