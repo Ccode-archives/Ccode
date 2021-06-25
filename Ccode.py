@@ -94,5 +94,5 @@ os.system("node main.js")
 os.system("rm main.js")
 if not os.getcwd() == home + "/Ccode":
     os.system("rm -r node_modules")
-    os.system("cp package.json")
-    os.system("cp package-lock.json")
+    os.system("rm package.json")
+    os.system("rm package-lock.json")
