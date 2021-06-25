@@ -3,7 +3,8 @@ import os
 import sys
 from os.path import expanduser
 home = expanduser("~")
-if not os.path.exists("node_modules"):
+node = os.path.exists("node_modules")
+if not node:
     os.system("cp -r ~/Ccode/node_modules .")
     os.system("cp ~/Ccode/package.json .")
     os.system("cp ~/Ccode/package-lock.json .")
@@ -92,7 +93,7 @@ for line in text:
 #run commands
 os.system("node main.js")
 os.system("rm main.js")
-if not os.getcwd() == home + "/Ccode":
+if not node:
     os.system("rm -r node_modules")
     os.system("rm package.json")
     os.system("rm package-lock.json")
