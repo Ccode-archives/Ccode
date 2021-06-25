@@ -3,7 +3,7 @@ import os
 import sys
 from os.path import expanduser
 home = expanduser("~")
-node = os.path.exists("node_modules")
+node = os.path.exists("package.json")
 if not node:
     os.system("cp -r ~/Ccode/node_modules .")
     os.system("cp ~/Ccode/package.json .")
