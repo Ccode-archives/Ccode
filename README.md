@@ -33,7 +33,22 @@ git clone https://github.com/Ccode-lang/Ccode.git
 cd Ccode/
 make all
 ```
+###Output from ```make all```
+```
+Installing npm deps...
 
+added 3 packages, and audited 4 packages in 1s
+
+found 0 vulnerabilities
+Done
+
+Testing...
+running hello world...
+
+
+Please don't run in node project folders
+hello world
+```
 ## Included commands
 ### Print syntax: 
 ```
