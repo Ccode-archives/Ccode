@@ -1,6 +1,15 @@
 #imports and settings
 import os
 import sys
+from os.path import expanduser
+home = expanduser("~")
+if not os.path.exists("node_modules"):
+    os.system("cp -r ~/Ccode/node_modules .")
+    os.system("cp ~/Ccode/package.json .")
+    os.system("cp ~/Ccode/package-lock.json .")
+else:
+    print("Please don't run in node project folders")
+#make main.js
 os.system("touch main.js")
 args = sys.argv
 try:
@@ -75,6 +84,7 @@ for line in text:
         js(out + ";")
     elif inp.endswith(")"):
         js(inp)
+    #errors
     else:
         NU(line_num)
 #end of loop
@@ -82,3 +92,7 @@ for line in text:
 #run commands
 os.system("node main.js")
 os.system("rm main.js")
+if not os.getcwd() == home + "/Ccode":
+    os.system("rm -r node_modules")
+    os.system("cp package.json")
+    os.system("cp package-lock.json")
