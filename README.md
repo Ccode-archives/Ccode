@@ -6,7 +6,7 @@ Ccode has nothing to do with any other version of C, it is a separate project.
 Please send in pull requests to get your features here.
 
 ## How it works
-1. It first copys main.js from scripts to the main dir.
+1. It first creates main.js and imports input lines.
 2. It reads a file given to it and gets rid of whitespace such as tabs or spaces at the start or beginning of a command.
 3. Once it reads all the lines it runs the Javascript it created.
 4. It deletes the Javascript. (Comment the last line to turn this off, if turned off it may cause errors)
