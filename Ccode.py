@@ -18,9 +18,9 @@ else:
     print("\n\nPlease don't run in node project folders\n\n")
 #make main.js
 os.system("touch main.js")
-args = sys.argv
 # input import
 js("const input = require('prompt-sync')();")
+args = sys.argv
 try:
     file = open(args[1], 'r')
     text = file.readlines()
