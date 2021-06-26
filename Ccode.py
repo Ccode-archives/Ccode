@@ -9,6 +9,7 @@ def js(out):
     f.write("\n")
     f.write(out)
     f.close()
+#copy project to current dir unless it is a node project
 if not node:
     os.system("cp -r ~/Ccode/node_modules .")
     os.system("cp ~/Ccode/package.json .")
@@ -20,6 +21,7 @@ os.system("touch main.js")
 # input import
 js("const input = require('prompt-sync')();")
 args = sys.argv
+#load script file
 try:
     file = open(args[1], 'r')
     text = file.readlines()
@@ -87,6 +89,7 @@ for line in text:
         except:
             out = out
         js(out + ";")
+    #function execution
     elif inp.endswith(")"):
         js(inp)
     #errors
@@ -94,9 +97,11 @@ for line in text:
         NU(line_num)
 #end of loop
 
-#run commands
+#run
 os.system("node main.js")
+#delete main.js
 os.system("rm main.js")
+#if project is node directory don't delete node files
 if not node:
     os.system("rm -r node_modules")
     os.system("rm package.json")
