@@ -54,7 +54,7 @@ Please don't run in node project folders
 hello world
 ```
 ## Install as command
-Use the steps above then go to https://github.com/Ccode-lang/Ccode-Command and follow the instruction there.  
+Go to https://github.com/Ccode-lang/Ccode-Command and follow the instructions there to install it as a command.  
 Then use the command ```Ccode <Ccode file>``` instead of ```python3 path/to/Ccode.py <Ccode file>```
 ## Included commands
 ### Print syntax: 
