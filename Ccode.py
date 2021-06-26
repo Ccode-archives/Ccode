@@ -19,10 +19,10 @@ try:
     file.close()
 except:
     print("\n\n\n\ngiven file missing, aborting\n\n\n\n")
-    os.system("rm main.js")
     os.system("rm -r node_modules")
     os.system("rm package.json")
     os.system("rm package-lock.json")
+    os.system("rm main.js")
 
 #js writing command
 def js(out):
