@@ -4,6 +4,12 @@ import sys
 from os.path import expanduser
 home = expanduser("~")
 node = os.path.exists("package.json")
+#js writing command
+def js(out):
+    f = open("main.js", "a")
+    f.write("\n")
+    f.write(out)
+    f.close()
 if not node:
     os.system("cp -r ~/Ccode/node_modules .")
     os.system("cp ~/Ccode/package.json .")
@@ -24,12 +30,7 @@ except:
     os.system("rm package-lock.json")
     os.system("rm main.js")
 
-#js writing command
-def js(out):
-    f = open("main.js", "a")
-    f.write("\n")
-    f.write(out)
-    f.close()
+# input import
 js("const input = require('prompt-sync')();")
 #unknown command message
 def NU(line):
