@@ -2,6 +2,9 @@
 A new, fast, and lightweight language that compiles to javascript.  
 Ccode has nothing to do with any other version of C, it is a separate project.
 
+## Supported platforms
+ * linux
+ * macos
 ## Contributing
 Please send in pull requests to get your features here.
 
