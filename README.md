@@ -33,7 +33,7 @@ git clone https://github.com/Ccode-lang/Ccode.git
 cd Ccode/
 make all
 ```
-###Output from ```make all```
+### Output from ```make all```
 ```
 Installing npm deps...
 
@@ -46,7 +46,11 @@ Testing...
 running hello world...
 
 
+
+
 Please don't run in node project folders
+
+
 hello world
 ```
 ## Install as command
