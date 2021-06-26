@@ -19,6 +19,8 @@ else:
 #make main.js
 os.system("touch main.js")
 args = sys.argv
+# input import
+js("const input = require('prompt-sync')();")
 try:
     file = open(args[1], 'r')
     text = file.readlines()
@@ -30,8 +32,7 @@ except:
     os.system("rm package-lock.json")
     os.system("rm main.js")
 
-# input import
-js("const input = require('prompt-sync')();")
+
 #unknown command message
 def NU(line):
     print("error on line: " + str(line))
