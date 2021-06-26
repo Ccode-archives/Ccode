@@ -1,9 +1,8 @@
 #imports and settings
 import os
 import sys
-from os.path import expanduser
-home = expanduser("~")
-node = os.path.exists("package.json")
+#check if the directory is a node project
+node = os.path.exists("package.json") or os.path.exists("main.js")
 #js writing command
 def js(out):
     f = open("main.js", "a")
