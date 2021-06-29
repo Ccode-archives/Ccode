@@ -30,12 +30,7 @@ python Ccode.py <path to Ccode file>
 
 
 ## Installation
-```bash
-command cd ~/
-git clone https://github.com/Ccode-lang/Ccode.git
-cd Ccode/
-make all
-```
+Go to https://github.com/Ccode-lang/Ccode-Command and follow instructions there.
 ### Output from ```make all```
 ```
 Installing npm deps...
@@ -56,9 +51,6 @@ Please don't run in node project folders
 
 hello world
 ```
-## Install as command
-Go to https://github.com/Ccode-lang/Ccode-Command and follow the instructions there to install it as a command.  
-Then use the command ```Ccode <Ccode file>``` instead of ```python3 path/to/Ccode.py <Ccode file>```
 ## Included commands
 ### Print syntax: 
 ```
