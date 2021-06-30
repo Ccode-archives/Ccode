@@ -2,7 +2,7 @@
 import os
 import sys
 #check if the directory is a node project
-node = os.path.exists("package.json") or os.path.exists("main.js")
+node = os.path.exists("main.js")
 #js writing command
 def js(out):
     #If dir is node project don't write to main.js
