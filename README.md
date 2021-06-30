@@ -5,6 +5,7 @@ Ccode has nothing to do with any other version of C, it is a separate project.
 ## Supported platforms
  * linux
  * macos
+ * windows (using WSL)
 ## Contributing
 Please send in pull requests to get your features here.
 
