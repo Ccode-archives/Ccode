@@ -5,10 +5,14 @@ import sys
 node = os.path.exists("package.json") or os.path.exists("main.js")
 #js writing command
 def js(out):
-    f = open("main.js", "a")
-    f.write("\n")
-    f.write(out)
-    f.close()
+    #If dir is node project don't write to main.js
+    if not node:
+        f = open("main.js", "a")
+        f.write("\n")
+        f.write(out)
+        f.close()
+    else:
+        return
 #copy project to current dir unless it is a node project
 if not node:
     os.system("cp -r ~/Ccode/node_modules .")
@@ -96,13 +100,10 @@ for line in text:
     else:
         NU(line_num)
 #end of loop
-
-#run
-os.system("node main.js")
-#delete main.js
-os.system("rm main.js")
-#if project is node directory don't delete node files
+#if project is node directory don't delete node files or run node project made
 if not node:
+    os.system("node main.js")
+    os.system("rm main.js")
     os.system("rm -r node_modules")
     os.system("rm package.json")
     os.system("rm package-lock.json")
