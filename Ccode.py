@@ -23,7 +23,8 @@ if not node:
 else:
     print("\n\nPlease don't run in node project folders\n\n")
 #make main.js
-os.system("touch main.js")
+if not node:
+    os.system("touch main.js")
 # input import
 js("const input = require('prompt-sync')();")
 args = sys.argv
