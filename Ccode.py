@@ -3,6 +3,8 @@ import os
 import sys
 #check if the directory is a node project
 node = os.path.exists("main.js")
+if os.getcwd().endswith("Ccode"):
+    node = True
 #js writing command
 def js(out):
     #If dir is node project don't write to main.js
