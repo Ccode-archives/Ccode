@@ -21,7 +21,7 @@ if not node:
     os.system("cp ~/Ccode/package.json .")
     os.system("cp ~/Ccode/package-lock.json .")
 else:
-    print("\n\nPlease don't run in node project folders\n\n")
+    print("\n\nPlease don't run in node project folders.  Project will be scanned for errors but not run.\n\n")
 #make main.js
 if not node:
     os.system("touch main.js")
