@@ -34,7 +34,7 @@ try:
     text = file.readlines()
     file.close()
 except:
-    print("\n\n\n\n" + args[1] + " missing, aborting\n\n\n\n")
+    print("\n\n\n\nFile " + args[1] + " missing, aborting\n\n\n\n")
     if not node:
         os.system("rm -r node_modules")
         os.system("rm package.json")
