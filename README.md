@@ -1,6 +1,7 @@
 ## Ccode
 A new, fast, and lightweight language that compiles to javascript.  
-Ccode has nothing to do with any other version of C, it is a separate project.
+Ccode has nothing to do with any other version of C, it is a separate project.  
+Go to Discussions page to get help on how to use!
 
 ## Supported platforms
  * linux
@@ -22,6 +23,11 @@ python3 Ccode.py <path to Ccode file>
 
 # python2
 python Ccode.py <path to Ccode file>
+# or
+python2 Ccode.py <path to Ccode file>
+
+# with Ccode command
+Ccode <flags> <path to Ccode file>
 ```
 
 ## Requirments
