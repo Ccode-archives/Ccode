@@ -27,7 +27,7 @@ python Ccode.py <path to Ccode file>
 python2 Ccode.py <path to Ccode file>
 
 # with Ccode command
-Ccode <flags> <path to Ccode file>
+Ccode <flags>
 ```
 
 ## Requirments
