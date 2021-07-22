@@ -15,8 +15,11 @@ Please send in pull requests to get your features here.
 2. It reads a file given to it and gets rid of whitespace such as tabs or spaces at the start or beginning of a command.
 3. Once it reads all the lines it runs the Javascript it created.
 4. It deletes the Javascript.
-
-## Running
+## setup (without Ccode Command addon)
+```bash
+make all
+```
+## Running (without Ccode command addon)
 ```bash
 # python3
 python3 Ccode.py <path to Ccode file>
