@@ -2,7 +2,7 @@
 import os
 import sys
 #check if the directory is a node project
-node = os.path.exists("main.js")
+node = os.path.exists("main.js") or os.path.exists("node_modules") or os.path.exists("package.json")
 if os.getcwd().endswith("Ccode"):
     node = True
 #js writing command
