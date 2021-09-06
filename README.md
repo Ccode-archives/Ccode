@@ -41,15 +41,6 @@ Ccode <flags> # runs main.cc in current folder if no file is given with -f flag
 
 ## Installation
 Go to https://github.com/Ccode-lang/Ccode-Command and follow instructions there.
-### Output from ```make all```
-```
-Installing npm deps...
-
-added 3 packages, and audited 4 packages in 1s
-
-found 0 vulnerabilities
-Done
-```
 ## Included commands
 ### Print syntax: 
 ```
