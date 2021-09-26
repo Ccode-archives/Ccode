@@ -41,6 +41,7 @@ Ccode <flags> # runs main.cc in current folder if no file is given with -f flag
 
 ## Installation
 Go to https://github.com/Ccode-lang/Ccode-Command and follow instructions there.
+> this may be out of sync!
 ## Included commands
 ### Print syntax: 
 ```
