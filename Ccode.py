@@ -2,14 +2,14 @@
 import os
 import sys
 #check if the directory is a node project
-node = os.path.exists("main.js") or os.path.exists("node_modules") or os.path.exists("package.json")
+node = os.path.exists("main.js") or os.path.exists("node_modules") or os.path.exists("package.json") or os.path.exists("lib")
 if os.getcwd().endswith("Ccode"):
     node = True
 #js writing command
 def js(out):
-    #If dir is node project don't write to main.js
+    #If dir is node project don't write to temp.js
     if not node:
-        f = open("main.js", "a")
+        f = open("temp.js", "a")
         f.write("\n")
         f.write(out)
         f.close()
@@ -20,13 +20,19 @@ if not node:
     os.system("cp -r ~/Ccode/node_modules .")
     os.system("cp ~/Ccode/package.json .")
     os.system("cp ~/Ccode/package-lock.json .")
+    os.system("cp -r ~/Ccode/lib .")
 else:
     print("\n\nPlease don't run in node project folders.  Project will be scanned for errors but not run.\n\n")
-#make main.js
+#make temp.js
 if not node:
-    os.system("touch main.js")
+    os.system("touch temp.js")
 # input import
 js("const input = require('prompt-sync')();")
+# builtins
+builtins = open("lib/builtins.js", "r")
+data = builtins.read()
+builtins.close()
+js(data + "\n")
 args = sys.argv
 #load script file
 try:
@@ -39,7 +45,7 @@ except:
         os.system("rm -r node_modules")
         os.system("rm package.json")
         os.system("rm package-lock.json")
-        os.system("rm main.js")
+        os.system("rm temp.js")
 
 
 #unknown command message
@@ -51,14 +57,17 @@ for line in text:
     line_num += 1
     #input
     inp = line.strip()
-    #print
-    if inp.startswith("print "):
-        println = inp.replace("print ", "")
-        out = "console.log(" + println + ");"
-        js(out)
     #comments
-    elif inp == "" or inp.startswith("//"):
+    if inp == "" or inp.startswith("//"):
         out = "null"
+    #imports
+    elif inp.startswith("import "):
+        imp = inp[7:]
+        #get file
+        impfile = open("lib/" + imp + ".js", "r")
+        data = impfile.read()
+        impfile.close()
+        js(data + "\n")
     #functions
     elif inp.startswith("func ") and inp.endswith(" {"):
         out = inp.replace("func ", "function ")
@@ -106,8 +115,9 @@ for line in text:
 #end of loop
 #if project is node directory don't delete node files or run node project made
 if not node:
-    os.system("node main.js")
-    os.system("rm main.js")
+    os.system("node temp.js")
+    os.system("rm temp.js")
     os.system("rm -r node_modules")
     os.system("rm package.json")
     os.system("rm package-lock.json")
+    os.system("rm -r lib")

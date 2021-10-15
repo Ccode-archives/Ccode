@@ -3,13 +3,13 @@ set run = 1
 while run == 1 {
 	set inp = input
 	if inp == "hello" {
-		print "hi"
+		print("hi")
 	}
 	elif inp == "stop" {
-		print "stopping"
+		print("stopping")
 		run = 0
 	}
 	else {
-		print "I do not understand"
+		print("I do not understand")
 	}
 }

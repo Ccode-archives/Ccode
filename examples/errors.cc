@@ -2,6 +2,6 @@
 error
 func test() {
 	error
-	print 'hi'
+	print('hi')
 }
 test()
