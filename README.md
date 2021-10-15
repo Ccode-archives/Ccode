@@ -45,7 +45,11 @@ Go to https://github.com/Ccode-lang/Ccode-Command and follow instructions there.
 ## Included commands
 ### Print syntax: 
 ```
-print 'hi'
+print('hi')
+```
+### imports
+```
+import <module name>
 ```
 ### Variables syntax1: 
 ```
