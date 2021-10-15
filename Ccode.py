@@ -120,4 +120,4 @@ if not node:
     os.system("rm -r node_modules")
     os.system("rm package.json")
     os.system("rm package-lock.json")
-    os.system("rm -r ~/Ccode/lib")
+    os.system("rm -r lib")
