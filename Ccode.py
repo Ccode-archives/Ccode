@@ -64,7 +64,7 @@ for line in text:
     elif inp.startswith("import "):
         imp = inp[7:]
         #get file
-        impfile = open("~/Ccode/lib/builtins.js", "r")
+        impfile = open("lib/" + imp + ".js", "r")
         data = impfile.read()
         impfile.close()
         js(data + "\n")
