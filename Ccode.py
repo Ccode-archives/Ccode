@@ -2,7 +2,7 @@
 import os
 import sys
 #check if the directory is a node project
-node = os.path.exists("main.js") or os.path.exists("node_modules") or os.path.exists("package.json")
+node = os.path.exists("main.js") or os.path.exists("node_modules") or os.path.exists("package.json") or os.path.exists("lib")
 if os.getcwd().endswith("Ccode"):
     node = True
 #js writing command
@@ -20,6 +20,7 @@ if not node:
     os.system("cp -r ~/Ccode/node_modules .")
     os.system("cp ~/Ccode/package.json .")
     os.system("cp ~/Ccode/package-lock.json .")
+    os.system("cp -r ~/Ccode/lib")
 else:
     print("\n\nPlease don't run in node project folders.  Project will be scanned for errors but not run.\n\n")
 #make temp.js
@@ -119,3 +120,4 @@ if not node:
     os.system("rm -r node_modules")
     os.system("rm package.json")
     os.system("rm package-lock.json")
+    os.system("rm -r ~/Ccode/lib")
