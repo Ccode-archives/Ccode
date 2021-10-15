@@ -7,9 +7,9 @@ if os.getcwd().endswith("Ccode"):
     node = True
 #js writing command
 def js(out):
-    #If dir is node project don't write to main.js
+    #If dir is node project don't write to temp.js
     if not node:
-        f = open("main.js", "a")
+        f = open("temp.js", "a")
         f.write("\n")
         f.write(out)
         f.close()
@@ -22,11 +22,16 @@ if not node:
     os.system("cp ~/Ccode/package-lock.json .")
 else:
     print("\n\nPlease don't run in node project folders.  Project will be scanned for errors but not run.\n\n")
-#make main.js
+#make temp.js
 if not node:
-    os.system("touch main.js")
+    os.system("touch temp.js")
 # input import
 js("const input = require('prompt-sync')();")
+# builtins
+builtins = open("~/Ccode/lib/builtins.js", "r")
+data = builtins.read()
+builtins.close()
+js(data)
 args = sys.argv
 #load script file
 try:
@@ -39,7 +44,7 @@ except:
         os.system("rm -r node_modules")
         os.system("rm package.json")
         os.system("rm package-lock.json")
-        os.system("rm main.js")
+        os.system("rm temp.js")
 
 
 #unknown command message
@@ -101,8 +106,8 @@ for line in text:
 #end of loop
 #if project is node directory don't delete node files or run node project made
 if not node:
-    os.system("node main.js")
-    os.system("rm main.js")
+    os.system("node temp.js")
+    os.system("rm temp.js")
     os.system("rm -r node_modules")
     os.system("rm package.json")
     os.system("rm package-lock.json")
