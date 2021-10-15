@@ -31,7 +31,7 @@ js("const input = require('prompt-sync')();")
 builtins = open("~/Ccode/lib/builtins.js", "r")
 data = builtins.read()
 builtins.close()
-js(data + \n)
+js(data + "\n")
 args = sys.argv
 #load script file
 try:
