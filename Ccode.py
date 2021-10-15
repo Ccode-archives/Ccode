@@ -31,7 +31,7 @@ js("const input = require('prompt-sync')();")
 builtins = open("~/Ccode/lib/builtins.js", "r")
 data = builtins.read()
 builtins.close()
-js(data)
+js(data + \n)
 args = sys.argv
 #load script file
 try:
@@ -59,6 +59,14 @@ for line in text:
     #comments
     if inp == "" or inp.startswith("//"):
         out = "null"
+    #imports
+    elif inp.startswith("import "):
+        imp = inp[7:]
+        #get file
+        impfile = open("~/Ccode/lib/builtins.js", "r")
+        data = impfile.read()
+        impfile.close()
+        js(data + "\n")
     #functions
     elif inp.startswith("func ") and inp.endswith(" {"):
         out = inp.replace("func ", "function ")
