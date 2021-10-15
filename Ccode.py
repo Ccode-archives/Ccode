@@ -29,7 +29,7 @@ if not node:
 # input import
 js("const input = require('prompt-sync')();")
 # builtins
-builtins = open("~/Ccode/lib/builtins.js", "r")
+builtins = open("lib/builtins.js", "r")
 data = builtins.read()
 builtins.close()
 js(data + "\n")
