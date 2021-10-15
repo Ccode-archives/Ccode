@@ -51,13 +51,8 @@ for line in text:
     line_num += 1
     #input
     inp = line.strip()
-    #print
-    if inp.startswith("print "):
-        println = inp.replace("print ", "")
-        out = "console.log(" + println + ");"
-        js(out)
     #comments
-    elif inp == "" or inp.startswith("//"):
+    if inp == "" or inp.startswith("//"):
         out = "null"
     #functions
     elif inp.startswith("func ") and inp.endswith(" {"):
