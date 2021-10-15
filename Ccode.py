@@ -64,10 +64,13 @@ for line in text:
     elif inp.startswith("import "):
         imp = inp[7:]
         #get file
-        impfile = open("lib/" + imp + ".js", "r")
-        data = impfile.read()
-        impfile.close()
-        js(data + "\n")
+        try:
+            impfile = open("lib/" + imp + ".js", "r")
+            data = impfile.read()
+            impfile.close()
+            js(data + "\n")
+        except:
+            print(f'module "{imp}" does not exist')
     #functions
     elif inp.startswith("func ") and inp.endswith(" {"):
         out = inp.replace("func ", "function ")
