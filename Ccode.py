@@ -34,7 +34,7 @@ data = builtins.read()
 builtins.close()
 js(data + "\n")
 builtin_commands = open("lib/builtins/com.txt", "r")
-commands = builtin_commands.read()
+commands = builtin_commands.readlines()
 builtin_commands.close()
 args = sys.argv
 #load script file
@@ -73,7 +73,7 @@ for line in text:
             impfile.close()
             js(data + "\n")
             comfile = open("lib/" + imp + "/com.txt", "r")
-            newcoms = comfile.read()
+            newcoms = comfile.readlines()
             comfile.close()
             commands = commands + newcoms
         except:
