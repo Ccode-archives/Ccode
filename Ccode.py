@@ -29,10 +29,13 @@ if not node:
 # input import
 js("const input = require('prompt-sync')();")
 # builtins
-builtins = open("lib/builtins.js", "r")
+builtins = open("lib/builtins/builtins.js", "r")
 data = builtins.read()
 builtins.close()
 js(data + "\n")
+builtin_commands = open("lib/builtins/com.txt", "r")
+commands = builtin_commands.readlines()
+builtin_commands.close()
 args = sys.argv
 #load script file
 try:
@@ -65,14 +68,20 @@ for line in text:
         imp = inp[7:]
         #get file
         try:
-            impfile = open("lib/" + imp + ".js", "r")
+            impfile = open("lib/" + imp + "/" + imp + ".js", "r")
             data = impfile.read()
             impfile.close()
             js(data + "\n")
+            comfile = open("lib/" + imp + "/com.txt", "r")
+            newcoms = comfile.readlines()
+            comfile.close()
+            commands = commands + newcoms
         except:
             print(f'module "{imp}" does not exist')
     #functions
     elif inp.startswith("func ") and inp.endswith(" {"):
+        name = inp.replace("func ", "").split("(")[0]
+        commands.append(name)
         out = inp.replace("func ", "function ")
         out = out.replace("{", "")
         js(out + "{")
@@ -111,7 +120,12 @@ for line in text:
         js(out + ";")
     #function execution
     elif inp.endswith(")"):
-        js(inp)
+        if inp.split("(")[0] + "\n" in commands:
+            js(inp)
+        else:
+            print("unknown command")
+            NU(line_num)
+            break
     #errors
     else:
         NU(line_num)
