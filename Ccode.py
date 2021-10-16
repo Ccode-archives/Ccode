@@ -68,7 +68,7 @@ for line in text:
         imp = inp[7:]
         #get file
         try:
-            impfile = open("lib/" + imp + "/" imp + ".js", "r")
+            impfile = open("lib/" + imp + "/" + imp + ".js", "r")
             data = impfile.read()
             impfile.close()
             js(data + "\n")
