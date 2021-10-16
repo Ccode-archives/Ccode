@@ -120,7 +120,7 @@ for line in text:
         js(out + ";")
     #function execution
     elif inp.endswith(")"):
-        if inp.split("(")[0] in commands:
+        if inp.split("(")[0] + "\n" in commands:
             js(inp)
         else:
             print("unknown command")
