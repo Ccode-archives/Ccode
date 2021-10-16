@@ -80,6 +80,8 @@ for line in text:
             print(f'module "{imp}" does not exist')
     #functions
     elif inp.startswith("func ") and inp.endswith(" {"):
+        name = inp.replace("func ", "").split("(")[0]
+        commands.append(name)
         out = inp.replace("func ", "function ")
         out = out.replace("{", "")
         js(out + "{")
