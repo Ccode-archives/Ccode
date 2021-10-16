@@ -33,9 +33,9 @@ builtins = open("lib/builtins/builtins.js", "r")
 data = builtins.read()
 builtins.close()
 js(data + "\n")
-builtin-commands = open("lib/builtins/com.txt", "r")
-commands = builtin-commands.read()
-builtin-commands.close()
+builtin_commands = open("lib/builtins/com.txt", "r")
+commands = builtin_commands.read()
+builtin_commands.close()
 args = sys.argv
 #load script file
 try:
