@@ -76,6 +76,10 @@ print 'hello'
 h = input
 ```
 This gets user input and stores it in the given variable.
+### inline javascript
+```
+js <js command> js
+```
 ### While
 ```
 while h == 1 {  
