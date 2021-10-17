@@ -126,6 +126,10 @@ for line in text:
             print("unknown command")
             NU(line_num)
             break
+    #inline js
+    elif inp.startswith("js ") and inp.endswith(" js"):
+        out = inp[3:][:-3]
+        js(out)
     #errors
     else:
         NU(line_num)
