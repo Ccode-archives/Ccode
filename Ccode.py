@@ -49,6 +49,7 @@ except:
         os.system("rm package.json")
         os.system("rm package-lock.json")
         os.system("rm temp.js")
+        os.system("rm -r lib")
 
 
 #unknown command message
