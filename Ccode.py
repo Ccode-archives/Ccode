@@ -81,7 +81,7 @@ for line in text:
     #functions
     elif inp.startswith("func ") and inp.endswith(" {"):
         name = inp.replace("func ", "").split("(")[0]
-        commands.append(name)
+        commands.append(name + "\n")
         out = inp.replace("func ", "function ")
         out = out.replace("{", "")
         js(out + "{")
