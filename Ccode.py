@@ -26,8 +26,6 @@ else:
 #make temp.js
 if not node:
     os.system("touch temp.js")
-# input import
-js("const input = require('prompt-sync')();")
 # builtins
 os.system("cp -r ~/Ccode/lib/builtins lib")
 builtins = open("lib/builtins/builtins.js", "r")
