@@ -20,15 +20,14 @@ if not node:
     os.system("cp -r ~/Ccode/node_modules .")
     os.system("cp ~/Ccode/package.json .")
     os.system("cp ~/Ccode/package-lock.json .")
-    os.system("cp -r ~/Ccode/lib .")
+    os.system("mkdir lib")
 else:
     print("\n\nPlease don't run in node project folders.  Project will be scanned for errors but not run.\n\n")
 #make temp.js
 if not node:
     os.system("touch temp.js")
-# input import
-js("const input = require('prompt-sync')();")
 # builtins
+os.system("cp -r ~/Ccode/lib/builtins lib")
 builtins = open("lib/builtins/builtins.js", "r")
 data = builtins.read()
 builtins.close()
@@ -36,6 +35,7 @@ js(data + "\n")
 builtin_commands = open("lib/builtins/com.txt", "r")
 commands = builtin_commands.readlines()
 builtin_commands.close()
+os.system("rm -r lib/builtins")
 args = sys.argv
 #load script file
 try:
@@ -69,6 +69,7 @@ for line in text:
         imp = inp[7:]
         #get file
         try:
+            os.system("cp -r ~/Ccode/lib/" + imp + " lib")
             impfile = open("lib/" + imp + "/" + imp + ".js", "r")
             data = impfile.read()
             impfile.close()
@@ -77,6 +78,7 @@ for line in text:
             newcoms = comfile.readlines()
             comfile.close()
             commands = commands + newcoms
+            os.system("rm -r lib/" + imp)
         except:
             print(f'module "{imp}" does not exist')
     #functions
