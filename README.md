@@ -7,6 +7,11 @@ Go to Discussions page to get help on how to use!
  * linux
  * macos
  * windows (using WSL)
+## Installing third-party modules
+ * Download their module folder
+ * Put it in the libs folder
+ * Import it
+ * Done!
 ## Contributing
 Please send in pull requests to get your features here.
 
@@ -51,6 +56,8 @@ print('hi')
 ```
 import <module name>
 ```
+This will import all functions from that module.  
+See how this works in [imports.cc](https://github.com/Ccode-lang/Ccode/blob/main/examples/imports.cc).
 ### Variables syntax1: 
 ```
 set h = 5
