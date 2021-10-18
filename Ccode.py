@@ -59,6 +59,8 @@ line_num = 0
 #loop start
 for line in text:
     line_num += 1
+    # debug
+    #print(commands)
     #input
     inp = line.strip()
     #comments
