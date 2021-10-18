@@ -29,7 +29,7 @@ if not node:
 # input import
 js("const input = require('prompt-sync')();")
 # builtins
-os.system("cp ~/Ccode/lib/builtins lib")
+os.system("cp -r ~/Ccode/lib/builtins lib")
 builtins = open("lib/builtins/builtins.js", "r")
 data = builtins.read()
 builtins.close()
@@ -71,7 +71,7 @@ for line in text:
         imp = inp[7:]
         #get file
         try:
-            os.system("cp ~/Ccode/lib/" + imp + " lib")
+            os.system("cp -r ~/Ccode/lib/" + imp + " lib")
             impfile = open("lib/" + imp + "/" + imp + ".js", "r")
             data = impfile.read()
             impfile.close()
