@@ -116,6 +116,8 @@ for line in text:
         if inp.startswith("set "):
             change = inp.replace("set ", "")
             out = "var " + change
+        elif inp.endswith(")"):
+            out = inp
         else:
             out = inp
         try:
@@ -127,6 +129,8 @@ for line in text:
     elif inp.endswith(")"):
         if inp.split("(")[0] + "\n" in commands:
             js(inp)
+        elif "=" in inp:
+            continue
         else:
             print("unknown command")
             NU(line_num)
