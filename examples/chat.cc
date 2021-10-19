@@ -1,7 +1,7 @@
 set run = 1
 
 while run == 1 {
-	set inp = input
+	set inp = input(">>")
 	if inp == "hello" {
 		print("hi")
 	}
