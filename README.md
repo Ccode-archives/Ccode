@@ -48,6 +48,8 @@ Ccode <flags> # runs main.cc in current folder if no file is given with -f flag
 Go to https://github.com/Ccode-lang/Ccode-Command and follow instructions there.
 > this may be out of sync!  
 
+## Find out how to use it
+See [here](https://github.com/Ccode-lang/Ccode/wiki/builtins-and-basic-use)
 ## Please record issues to get them fixed or go to discussion if you get an error message!
 This language is in early stages of development.  
 If you get a node.js error message it means you either forgoten a end bracket, parenthesis, forgot to execute a command, didn't execute a command right, or there is an error in the main Ccode.py file.  
