@@ -47,69 +47,9 @@ Ccode <flags> # runs main.cc in current folder if no file is given with -f flag
 ## Installation
 Go to https://github.com/Ccode-lang/Ccode-Command and follow instructions there.
 > this may be out of sync!  
-## Included commands
-### Print syntax: 
-```
-print('hi')
-```
-### imports
-```
-import <module name>
-```
-This will import all functions from that module.  
-See how this works in [imports.cc](https://github.com/Ccode-lang/Ccode/blob/main/examples/imports.cc).
-### Variables syntax1: 
-```
-set h = 5
-```
-#### syntax2:
-```
-h = 5
-```
-### If statements syntax: 
-```
-if h == 5 {  
-print 'hi'  
-}  
-elif h == 4 {   
-print 'bye'  
-}  
-else {  
-print 'hello'  
-}  
-```
-### Input variable syntax: 
-```
-h = input
-```
-This gets user input and stores it in the given variable.
-### inline javascript
-```
-js <js command> js
-```
-### While
-```
-while h == 1 {  
-print 'hi'  
-}  
-```
-### Functions
-Declaration
-```
-func test(num1, num2) {
-  print num1 + num2
-}
-```
-Using function
-```
-test(1, 2)
-```
 
-### Comments
-```
-// This is a comment
-```
-
+## Find out how to use it
+See [here](https://github.com/Ccode-lang/Ccode/wiki/builtins-and-basic-use)
 ## Please record issues to get them fixed or go to discussion if you get an error message!
 This language is in early stages of development.  
 If you get a node.js error message it means you either forgoten a end bracket, parenthesis, forgot to execute a command, didn't execute a command right, or there is an error in the main Ccode.py file.  
