@@ -78,9 +78,11 @@ else {
 print 'hello'  
 }  
 ```
-### Input variable syntax: 
+### Input syntax: 
 ```
-h = input
+input(">>")
+// or
+h = input(">>")
 ```
 This gets user input and stores it in the given variable.
 ### inline javascript
