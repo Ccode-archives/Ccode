@@ -120,10 +120,6 @@ for line in text:
             out = inp
         else:
             out = inp
-        try:
-            out = out.replace("input", "input('>>')")
-        except:
-            out = out
         js(out + ";")
     #function execution
     elif inp.endswith(")"):
