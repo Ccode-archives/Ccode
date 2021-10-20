@@ -120,7 +120,7 @@ for line in text:
                 print("unknown command")
                 NU(line_num)
         else:
-            if inp.split("=", 1)[1].strip().spilt("(")[0] + "\n" in commands:
+            if inp.split("=", 1)[1].spilt("(")[0].strip() + "\n" in commands:
                 js(inp)
             else:
                 print("unknown command")
