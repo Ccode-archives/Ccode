@@ -113,7 +113,7 @@ for line in text:
         js(inp)
     #function execution
     elif inp.endswith(")"):
-        if inp.count("(") > 2:
+        if inp.count("(") > 1:
             NU(line_num)
         else:
             if not "=" in inp:
