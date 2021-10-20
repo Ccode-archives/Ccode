@@ -117,7 +117,13 @@ for line in text:
             change = inp.replace("set ", "")
             out = "var " + change
         elif inp.endswith(")"):
-            out = inp
+            com = inp.split("=", 1)[1].strip().spilt("(")[0] + "\n"
+            if com in commands:
+                out = com
+            else:
+                print("unknown command")
+                NU(line_num)
+                out = "\n"
         else:
             out = inp
         js(out + ";")
@@ -125,12 +131,9 @@ for line in text:
     elif inp.endswith(")"):
         if inp.split("(")[0] + "\n" in commands:
             js(inp)
-        elif "=" in inp:
-            continue
         else:
             print("unknown command")
             NU(line_num)
-            break
     #inline js
     elif inp.startswith("js ") and inp.endswith(" js"):
         out = inp[3:][:-3]
