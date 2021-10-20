@@ -123,7 +123,11 @@ for line in text:
             com = inp.split("=", 1)[1]
             com = com.split("(")[0].strip() + "\n"
             if com in commands:
-                js(inp)
+                try:
+                    change = inp.replace("set ", "")
+                except:
+                    change = inp
+                js("var " + change)
             else:
                 print("unknown command")
                 NU(line_num)
