@@ -63,6 +63,9 @@ for line in text:
     #print(commands)
     #input
     inp = line.strip()
+    #more than one function a line
+    if inp.count("(") > 2:
+        NU(line_num)
     #comments
     if inp == "" or inp.startswith("//"):
         out = "null"
