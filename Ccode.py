@@ -111,29 +111,28 @@ for line in text:
     #end brackets
     elif inp == "}":
         js(inp)
+    #function execution
+    elif inp.endswith(")"):
+        if not "=" in inp:
+            if inp.split("(")[0] + "\n" in commands:
+                js(inp)
+            else:
+                print("unknown command")
+                NU(line_num)
+        else:
+            if inp.split("=", 1)[1].strip().spilt("(")[0] + "\n" in commands:
+                js(inp)
+            else:
+                print("unknown command")
+                NU(line_num)
     #variables
     elif inp.find("=") > -1 or inp.find(" = ") > -1:
         if inp.startswith("set "):
             change = inp.replace("set ", "")
             out = "var " + change
-        elif inp.endswith(")"):
-            com = inp.split("=", 1)[1].strip().spilt("(")[0] + "\n"
-            if com in commands:
-                out = com
-            else:
-                print("unknown command")
-                NU(line_num)
-                out = "\n"
         else:
             out = inp
         js(out + ";")
-    #function execution
-    elif inp.endswith(")"):
-        if inp.split("(")[0] + "\n" in commands:
-            js(inp)
-        else:
-            print("unknown command")
-            NU(line_num)
     #inline js
     elif inp.startswith("js ") and inp.endswith(" js"):
         out = inp[3:][:-3]
