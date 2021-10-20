@@ -63,9 +63,6 @@ for line in text:
     #print(commands)
     #input
     inp = line.strip()
-    #more than one function a line
-    if inp.count("(") > 2:
-        NU(line_num)
     #comments
     if inp == "" or inp.startswith("//"):
         out = "null"
@@ -116,24 +113,27 @@ for line in text:
         js(inp)
     #function execution
     elif inp.endswith(")"):
-        if not "=" in inp:
-            if inp.split("(")[0] + "\n" in commands:
-                js(inp)
-            else:
-                print("unknown command")
-                NU(line_num)
+        if inp.count("(") > 2:
+            NU(line_num)
         else:
-            com = inp.split("=", 1)[1]
-            com = com.split("(")[0].strip() + "\n"
-            if com in commands:
-                try:
-                    change = inp.replace("set ", "")
-                except:
-                    change = inp
-                js("var " + change)
+            if not "=" in inp:
+                if inp.split("(")[0] + "\n" in commands:
+                    js(inp)
+                else:
+                    print("unknown command")
+                    NU(line_num)
             else:
-                print("unknown command")
-                NU(line_num)
+                com = inp.split("=", 1)[1]
+                com = com.split("(")[0].strip() + "\n"
+                if com in commands:
+                    try:
+                        change = inp.replace("set ", "")
+                    except:
+                        change = inp
+                    js("var " + change)
+                else:
+                    print("unknown command")
+                    NU(line_num)
     #variables
     elif inp.find("=") > -1 or inp.find(" = ") > -1:
         if inp.startswith("set "):
