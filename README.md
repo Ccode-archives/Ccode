@@ -6,7 +6,7 @@ Go to Discussions page to get help on how to use!
 ## Supported platforms
  * linux
  * macos
- * windows (using WSL)
+ * windows (using WSL. No plan to implement normal windows.)
 ## Installing third-party modules
  * Download their module folder
  * Put it in the libs folder
