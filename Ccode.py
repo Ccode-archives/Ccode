@@ -120,7 +120,8 @@ for line in text:
                 print("unknown command")
                 NU(line_num)
         else:
-            com = inp.split("=", 1)[1].spilt("(")[0].strip() + "\n"
+            com = inp.split("=", 1)[1]
+            com = com.spilt("(")[0].strip() + "\n"
             if com in commands:
                 js(inp)
             else:
