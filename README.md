@@ -33,8 +33,9 @@ python3 Ccode.py <path to Ccode file>
 python Ccode.py <path to Ccode file>
 # or
 python2 Ccode.py <path to Ccode file>
-
-# with Ccode command
+```
+## With Ccode command addon
+```
 Ccode <flags> # runs main.cc in current folder if no file is given with -f flag
 ```
 
