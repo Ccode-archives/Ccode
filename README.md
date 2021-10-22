@@ -1,6 +1,6 @@
 ## Ccode
 A new, fast, and lightweight language that compiles to javascript.  
-Ccode has nothing to do with any other version of C, it is a separate project.  
+Ccode has nothing to do with C, it is a separate project.  
 Go to Discussions page to get help on how to use!
 
 ## Supported platforms
