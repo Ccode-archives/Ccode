@@ -118,7 +118,7 @@ for line in text:
         else:
             if not "=" in inp:
                 if inp.split("(")[0] + "\n" in commands:
-                    js(inp)
+                    js(inp + ";")
                 else:
                     print("unknown command")
                     NU(line_num)
@@ -130,7 +130,7 @@ for line in text:
                         change = inp.replace("set ", "")
                     except:
                         change = inp
-                    js("var " + change)
+                    js("var " + change + ";")
                 else:
                     print("unknown command")
                     NU(line_num)
