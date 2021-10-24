@@ -28,6 +28,9 @@ jobs:
           node-version: '14'
       - name: test
         run: |
+          cd ~
+          git clone https://github.com/Ccode-lang/Ccode.git
+          cd Ccode
           make all
           cd examples
           python3 ../Ccode.py hello_world.cc
