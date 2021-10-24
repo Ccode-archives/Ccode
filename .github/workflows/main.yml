@@ -28,6 +28,7 @@ jobs:
           node-version: '14'
       - name: test
         run: |
+          npm install -g npm@8.1.0
           cd ~
           git clone https://github.com/Ccode-lang/Ccode.git
           cd Ccode
