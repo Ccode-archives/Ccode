@@ -20,22 +20,22 @@ if not node:
     os.system("cp -r ~/Ccode/node_modules .")
     os.system("cp ~/Ccode/package.json .")
     os.system("cp ~/Ccode/package-lock.json .")
-    os.system("mkdir lib")
 else:
     print("\n\nPlease don't run in node project folders.  Project will be scanned for errors but not run.\n\n")
+os.system("mkdir cclib")
 #make temp.js
 if not node:
     os.system("touch temp.js")
 # builtins
-os.system("cp -r ~/Ccode/lib/builtins lib")
-builtins = open("lib/builtins/builtins.js", "r")
+os.system("cp -r ~/Ccode/lib/builtins cclib/builtins")
+builtins = open("cclib/builtins/builtins.js", "r")
 data = builtins.read()
 builtins.close()
 js(data + "\n")
-builtin_commands = open("lib/builtins/com.txt", "r")
+builtin_commands = open("cclib/builtins/com.txt", "r")
 commands = builtin_commands.readlines()
 builtin_commands.close()
-os.system("rm -r lib/builtins")
+os.system("rm -r cclib/builtins")
 args = sys.argv
 #load script file
 try:
@@ -49,7 +49,7 @@ except:
         os.system("rm package.json")
         os.system("rm package-lock.json")
         os.system("rm temp.js")
-        os.system("rm -r lib")
+    os.system("rm -r cclib")
 
 
 #unknown command message
@@ -71,16 +71,16 @@ for line in text:
         imp = inp[7:]
         #get file
         try:
-            os.system("cp -r ~/Ccode/lib/" + imp + " lib")
-            impfile = open("lib/" + imp + "/" + imp + ".js", "r")
+            os.system("cp -r ~/Ccode/lib/" + imp + " cclib")
+            impfile = open("cclib/" + imp + "/" + imp + ".js", "r")
             data = impfile.read()
             impfile.close()
             js(data + "\n")
-            comfile = open("lib/" + imp + "/com.txt", "r")
+            comfile = open("cclib/" + imp + "/com.txt", "r")
             newcoms = comfile.readlines()
             comfile.close()
             commands = commands + newcoms
-            os.system("rm -r lib/" + imp)
+            os.system("rm -r cclib/" + imp)
         except:
             print(f'module "{imp}" does not exist')
     #functions
@@ -157,4 +157,4 @@ if not node:
     os.system("rm -r node_modules")
     os.system("rm package.json")
     os.system("rm package-lock.json")
-    os.system("rm -r lib")
+os.system("rm -r cclib")
