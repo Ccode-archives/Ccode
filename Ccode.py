@@ -27,7 +27,7 @@ else:
 if not node:
     os.system("touch temp.js")
 # builtins
-os.system("cp -r ~/Ccode/lib/builtins cclib")
+os.system("cp -r ~/Ccode/lib/builtins cclib/builtins")
 builtins = open("cclib/builtins/builtins.js", "r")
 data = builtins.read()
 builtins.close()
