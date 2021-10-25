@@ -20,9 +20,9 @@ if not node:
     os.system("cp -r ~/Ccode/node_modules .")
     os.system("cp ~/Ccode/package.json .")
     os.system("cp ~/Ccode/package-lock.json .")
-    os.system("mkdir cclib")
 else:
     print("\n\nPlease don't run in node project folders.  Project will be scanned for errors but not run.\n\n")
+os.system("mkdir cclib")
 #make temp.js
 if not node:
     os.system("touch temp.js")
