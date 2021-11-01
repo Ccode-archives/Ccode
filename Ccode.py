@@ -1,6 +1,16 @@
 #imports and settings
 import os
 import sys
+import distutils.spawn
+
+
+def is_tool(name):
+    return distutils.spawn.find_executable(name) is not None
+
+if not is_tool("node"):
+    raise OSError("Node.js is not installed!")
+
+
 #check if the directory is a node project
 node = os.path.exists("main.js") or os.path.exists("node_modules") or os.path.exists("package.json") or os.path.exists("lib")
 if os.getcwd().endswith("Ccode"):
