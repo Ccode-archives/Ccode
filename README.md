@@ -24,6 +24,9 @@ Please send in pull requests to get your features here.
 4. It deletes the Javascript.
 ## setup (without Ccode Command addon)
 ```bash
+cd ~
+git clone https://github.com/Ccode-lang/Ccode.git
+cd Ccode
 make all
 ```
 ## Running (without Ccode command addon)
