@@ -50,7 +50,9 @@ Ccode <flags> # runs main.cc in current folder if no file is given with -f flag
 ## Installation
 Go to https://github.com/Ccode-lang/Ccode-Command and follow instructions there.
 > this may be out of sync!  
-
+## Uninstalling
+Ccode can be completely uninstalled by removing the `~/Ccode` directroy.
+Ccode (and its module) is completely contained in the `~/Ccode` directory.  If you have the `Ccode-command` addon you will have to uninstall that separately.
 ## Find out how to use it
 See [here](https://github.com/Ccode-lang/Ccode/wiki/builtins-and-basic-use)
 ## Please record issues to get them fixed or go to discussion if you get an error message!
