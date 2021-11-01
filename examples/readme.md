@@ -1,4 +1,4 @@
-## how to run
+## How to run
 with command plugin:
 ```bash
 cd examples
