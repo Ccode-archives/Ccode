@@ -35,7 +35,7 @@ js(data + "\n")
 builtin_commands = open("cclib/builtins/com.txt", "r")
 commands = builtin_commands.readlines()
 builtin_commands.close()
-os.system("rm -r cclib/builtins")
+os.system("rm -rf cclib/builtins")
 args = sys.argv
 #load script file
 try:
@@ -49,7 +49,7 @@ except:
         os.system("rm package.json")
         os.system("rm package-lock.json")
         os.system("rm temp.js")
-    os.system("rm -r cclib")
+    os.system("rm -rf cclib")
 
 
 #unknown command message
@@ -80,7 +80,7 @@ for line in text:
             newcoms = comfile.readlines()
             comfile.close()
             commands = commands + newcoms
-            os.system("rm -r cclib/" + imp)
+            os.system("rm -rf cclib/" + imp)
         except:
             print(f'module "{imp}" does not exist')
     #functions
@@ -157,4 +157,4 @@ if not node:
     os.system("rm -r node_modules")
     os.system("rm package.json")
     os.system("rm package-lock.json")
-os.system("rm -r cclib")
+os.system("rm -rf cclib")
