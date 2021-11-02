@@ -48,6 +48,7 @@ Ccode <flags> # runs main.cc in current folder if no file is given with -f flag
 1. Python 3 (To run the compiler)
 2. Bash (You need to be on Linux for it to work so this is installed)
 3. Node.js 14-15 (To run the Javascript files that are generated)
+4. NPM (for packages)
 
 
 ## Installation
