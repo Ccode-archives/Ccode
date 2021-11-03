@@ -10,10 +10,7 @@ Also look at https://github.com/Ccode-lang/Ccode/wiki/package-manager.
  * Macos
  * Windows (using WSL. No plan to implement normal windows.)
 ## Installing third-party modules
- * Download their module folder
- * Put it in the libs folder
- * Import it
- * Done!
+ * Download with reppack
 ## Contributing
 Please send in pull requests to get your features here.
 
