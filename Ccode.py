@@ -20,6 +20,8 @@ if platform.system() == "Windows":
 node = os.path.exists("main.js") or os.path.exists("node_modules") or os.path.exists("package.json") or os.path.exists("lib")
 if os.getcwd().endswith("Ccode"):
     node = True
+# run code at end
+runjs = True
 #js writing command
 def js(out):
     #If dir is node project don't write to temp.js
@@ -70,6 +72,8 @@ except:
 #unknown command message
 def NU(line):
     print("error on line: " + str(line))
+    global runjs
+    runjs = False
 line_num = 0
 #loop start
 for line in text:
@@ -129,14 +133,19 @@ for line in text:
     #function execution
     elif inp.endswith(")"):
         if inp.count("(") > 1:
+            print("Don't put more than one function in a line!")
             NU(line_num)
+            # exit on error
+            break
         else:
             if not "=" in inp:
                 if inp.split("(")[0] + "\n" in commands:
                     js(inp + ";")
                 else:
-                    print("unknown command")
+                    print("Unknown command was issued!")
                     NU(line_num)
+                    # exit on error
+                    break
             else:
                 com = inp.split("=", 1)[1]
                 com = com.split("(")[0].strip() + "\n"
@@ -147,8 +156,10 @@ for line in text:
                         change = inp
                     js("var " + change + ";")
                 else:
-                    print("unknown command")
+                    print("Unknown command was issued!")
                     NU(line_num)
+                    # exit on error
+                    break
     #variables
     elif inp.find("=") > -1 or inp.find(" = ") > -1:
         if inp.startswith("set "):
@@ -164,10 +175,13 @@ for line in text:
     #errors
     else:
         NU(line_num)
+        # exit on error
+        break
 #end of loop
 #if project is node directory don't delete node files or run node project made
 if not node:
-    os.system("node temp.js")
+    if runjs:
+        os.system("node temp.js")
     os.system("rm temp.js")
     os.system("rm -r node_modules")
     os.system("rm package.json")
