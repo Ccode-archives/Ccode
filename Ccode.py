@@ -71,7 +71,7 @@ except:
 def NU(line):
     print("error on line: " + str(line))
     # exit on error
-    quit()
+    break
 line_num = 0
 #loop start
 for line in text:
