@@ -72,7 +72,8 @@ except:
 #unknown command message
 def NU(line):
     print("error on line: " + str(line))
-    global runjs = False
+    global runjs
+    runjs = False
 line_num = 0
 #loop start
 for line in text:
