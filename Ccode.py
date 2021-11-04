@@ -8,13 +8,14 @@ import platform
 def is_tool(name):
     return distutils.spawn.find_executable(name) is not None
 
+if platform.system() == "Windows":
+    raise OSError("Don't run on Windows!")
 if not is_tool("node"):
     raise OSError("Node.js is not installed!")
 if not os.path.exists(os.path.expanduser("~") + "/Ccode"):
     raise OSError("Ccode language is not installed in the home directory!")
-if platform.system() == "Windows":
-    raise OSError("Don't run on Windows!")
-
+if not os.path.exists(os.path.expanduser("~") + "/Ccode/lib/builtins"):
+    raise OSError("Builtins library is not installed!")
 
 #check if the directory is a node project
 node = os.path.exists("main.js") or os.path.exists("node_modules") or os.path.exists("package.json") or os.path.exists("lib")
