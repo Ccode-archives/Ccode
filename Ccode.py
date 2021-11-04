@@ -70,6 +70,8 @@ except:
 #unknown command message
 def NU(line):
     print("error on line: " + str(line))
+    # exit on error
+    quit()
 line_num = 0
 #loop start
 for line in text:
@@ -129,13 +131,14 @@ for line in text:
     #function execution
     elif inp.endswith(")"):
         if inp.count("(") > 1:
+            print("Don't put more than one function in a line!")
             NU(line_num)
         else:
             if not "=" in inp:
                 if inp.split("(")[0] + "\n" in commands:
                     js(inp + ";")
                 else:
-                    print("unknown command")
+                    print("Unknown command was issued!")
                     NU(line_num)
             else:
                 com = inp.split("=", 1)[1]
@@ -147,7 +150,7 @@ for line in text:
                         change = inp
                     js("var " + change + ";")
                 else:
-                    print("unknown command")
+                    print("Unknown command was issued!")
                     NU(line_num)
     #variables
     elif inp.find("=") > -1 or inp.find(" = ") > -1:
