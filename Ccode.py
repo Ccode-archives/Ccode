@@ -70,8 +70,6 @@ except:
 #unknown command message
 def NU(line):
     print("error on line: " + str(line))
-    # exit on error
-    break
 line_num = 0
 #loop start
 for line in text:
@@ -133,6 +131,8 @@ for line in text:
         if inp.count("(") > 1:
             print("Don't put more than one function in a line!")
             NU(line_num)
+            # exit on error
+            break
         else:
             if not "=" in inp:
                 if inp.split("(")[0] + "\n" in commands:
@@ -140,6 +140,8 @@ for line in text:
                 else:
                     print("Unknown command was issued!")
                     NU(line_num)
+                    # exit on error
+                    break
             else:
                 com = inp.split("=", 1)[1]
                 com = com.split("(")[0].strip() + "\n"
@@ -152,6 +154,8 @@ for line in text:
                 else:
                     print("Unknown command was issued!")
                     NU(line_num)
+                    # exit on error
+                    break
     #variables
     elif inp.find("=") > -1 or inp.find(" = ") > -1:
         if inp.startswith("set "):
@@ -167,6 +171,8 @@ for line in text:
     #errors
     else:
         NU(line_num)
+        # exit on error
+        break
 #end of loop
 #if project is node directory don't delete node files or run node project made
 if not node:
