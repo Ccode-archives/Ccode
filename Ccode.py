@@ -91,6 +91,10 @@ for line in text:
     #comments
     if inp == "" or inp.startswith("//"):
         out = "null"
+    #inline js
+    elif inp.startswith("js ") and inp.endswith(" js"):
+        out = inp[3:][:-3]
+        js(out)
     #imports
     elif inp.startswith("import "):
         imp = inp[7:]
@@ -189,10 +193,6 @@ for line in text:
         else:
             out = inp
         js(out + ";")
-    #inline js
-    elif inp.startswith("js ") and inp.endswith(" js"):
-        out = inp[3:][:-3]
-        js(out)
     #errors
     else:
         NU(line_num)
