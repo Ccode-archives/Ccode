@@ -64,7 +64,7 @@ except:
     try:
         print("\n\n\n\nFile " + args[1] + " missing, aborting\n\n\n\n")
     except:
-        print("No arguments given")
+        print("\n\n\n\nNo arguments given\n\n\n\n")
     if not node:
         os.system("rm -r node_modules")
         os.system("rm package.json")
