@@ -117,11 +117,21 @@ for line in text:
         js(out + "{")
     #while
     elif inp.startswith("while ") and inp.endswith(" {"):
+        if inp.count("(") > 1:
+            print("Don't put more than one function in a line!")
+            NU(line_num)
+            # exit on error
+            break
         out = inp.replace("while ", "")
         out = out.replace(" {", "")
         js("while (" + out + ") {")
     #if statements
     elif inp.startswith("if ") and inp.endswith(" {"):
+        if inp.count("(") > 1:
+            print("Don't put more than one function in a line!")
+            NU(line_num)
+            # exit on error
+            break
         out = inp.replace("if ", "")
         out = out.replace(" {", "")
         js("if (" + out + ") {")
@@ -130,6 +140,11 @@ for line in text:
         js(inp)
     #elif
     elif inp.startswith("elif ") and inp.endswith(" {"):
+        if inp.count("(") > 1:
+            print("Don't put more than one function in a line!")
+            NU(line_num)
+            # exit on error
+            break
         out = inp.replace("elif ", "")
         out = out.replace(" {", "")
         js("else if (" + out + ") {")
