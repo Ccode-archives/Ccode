@@ -80,7 +80,7 @@ line_num = 0
 for line in text:
     line_num += 1
     # debug
-    #print(line.replace("\n", "") + " : " + str(commands))
+    #print(line.replace("\n", "") + " : \033[1;32m" + str(commands) + "\033[1;0m")
     # remove doubles in commands. (better for memmory)
     commands = list(dict.fromkeys(commands))
     #input
