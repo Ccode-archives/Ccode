@@ -30,15 +30,10 @@ make all
 ```bash
 # python3
 python3 Ccode.py <path to Ccode file>
-
-# python2
-python Ccode.py <path to Ccode file>
-# or
-python2 Ccode.py <path to Ccode file>
 ```
 ## With Ccode command addon
 ```
-Ccode <flags> # runs main.cc in current folder if no file is given with -f flag
+Ccode <file.cc> <args to pass>
 ```
 
 ## Requirments
