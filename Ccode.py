@@ -81,6 +81,8 @@ for line in text:
     line_num += 1
     # debug
     #print(commands)
+    # remove doubles in commands. (better for memmory)
+    commands = list(dict.fromkeys(commands))
     #input
     inp = line.strip()
     #comments
