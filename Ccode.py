@@ -202,7 +202,7 @@ for line in text:
 #if project is node directory don't delete node files or run node project made
 if not node:
     if runjs:
-        os.system("node temp.js")
+        os.system("node temp.js " + " ".join(args[1:]))
     os.system("rm temp.js")
     os.system("rm -r node_modules")
     os.system("rm package.json")
