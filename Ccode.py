@@ -121,8 +121,8 @@ for line in text:
         js(out + "{")
     #while
     elif inp.startswith("while ") and inp.endswith(" {"):
-        if inp.count("(") > 1:
-            print("Don't put more than one function in a line!")
+        if inp.count("(") > 0:
+            print("Don't put functions in this line!")
             NU(line_num)
             # exit on error
             break
@@ -131,8 +131,8 @@ for line in text:
         js("while (" + out + ") {")
     #if statements
     elif inp.startswith("if ") and inp.endswith(" {"):
-        if inp.count("(") > 1:
-            print("Don't put more than one function in a line!")
+        if inp.count("(") > 0:
+            print("Don't put functions in this line1")
             NU(line_num)
             # exit on error
             break
@@ -144,8 +144,8 @@ for line in text:
         js(inp)
     #elif
     elif inp.startswith("elif ") and inp.endswith(" {"):
-        if inp.count("(") > 1:
-            print("Don't put more than one function in a line!")
+        if inp.count("(") > 0:
+            print("Don't put functions in this line!")
             NU(line_num)
             # exit on error
             break
