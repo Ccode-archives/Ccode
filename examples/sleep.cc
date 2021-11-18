@@ -1,3 +1,5 @@
-print('In 4 seconds this will print "hi"')
-sleep(4000)
-print("hi")
+set inp = input("How many seconds should I wait?: ")
+js var seconds = Number(inp); js
+print("waiting " + seconds + " seconds...")
+sleep(seconds)
+print("done.")
